@@ -3,7 +3,8 @@ zwischen 7 und 15 Uhr automatisiert eine Mail an Arbeitskollegen (oder sonst wen
 Wird die URL zum Flask-Server aufgerufen, so wird automatisch die vorgefertigte Mail über ein bestehendes Mailkonto via SMTP verschickt. 
 Der Flask Server wird mittels HTTPS angesprochen, ein NGINX Reverse Proxy leitet die Anfragen dann intern weiter. Dazu ist es vorab notwendig,
 ein entsprechendes Zertifikat für die SSL-Verschlüsselung zu besitzen. In meinem Fall nutze ich let's encrypt (eine kleine Anleitung findet
-sich z.B. hier: https://www.inmotionhosting.com/support/website/ssl/lets-encrypt-ssl-ubuntu-with-certbot/). 
+sich z.B. hier: https://www.inmotionhosting.com/support/website/ssl/lets-encrypt-ssl-ubuntu-with-certbot/). Aufgrund der SSL-Verschlüsselung ist es
+empfehlenswert, wenn euer Server eine eigene Domain hat. 
 Das Skript kann dann z.B. in der Feuersoftware Connect Oberfläche als Benutzer-Webhook eingebunden werden (idealerweise bei Status "Ich komme").
 Das Skript sendet innerhalb einer Stunde nur eine Mail (falls man mal mehrfach auf den Zusagen Button drückt).
 
